@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -7,7 +8,10 @@ import SEO from "../components/seo"
 
 import "../style/global.css"
 
-const IndexPage = () => (
+const IndexPage = ({data}) => {
+
+return(
+
   <Layout>
     <SEO title="Home" />
     <section id="welcome">
@@ -37,7 +41,10 @@ const IndexPage = () => (
       <div>
       <p>technologies that I use most often:</p>
       <ul className="skills">
-        <li>HTML5</li>
+        {data.allSkillTech.nodes.map((node, index)=>(
+          <li key={index}>{node.name}</li>
+        ))}
+        {/*<li>HTML5</li>
         <li>CSS3</li>
         <li>JavaScript</li>
         <li>jQuery</li>
@@ -47,7 +54,7 @@ const IndexPage = () => (
         <li>Prestashop</li>
         <li>Wordpress</li>
         <li>Gatsby.js</li>
-        <li>git</li>
+        <li>git</li>*/}
       </ul>
       </div>
       
@@ -60,6 +67,17 @@ const IndexPage = () => (
     </section>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
-)
+)}
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    allSkillTech {
+      nodes {
+        id
+        name
+      }
+    }
+  }
+`
