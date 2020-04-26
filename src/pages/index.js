@@ -1,25 +1,22 @@
 import React from "react"
 import { Link } from "gatsby"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 import "../style/global.css"
 
 const IndexPage = ({data}) => {
-
+  var welcome = data.allMarkdownRemark.edges.map(({node})=>  node.html);
+  console.log(welcome);
 return(
 
   <Layout>
     <SEO title="Home" />
     <section id="welcome">
       <div>
-        <h2>Hi there!</h2>
-        <h1>I'm Marcin L.</h1>
-        <p>this is my portfolio website</p>
-        <p>here you can check the projects I have worked on as <span className="contrast-text">frontend developer</span><br/>and get to know me a little closer</p>
+      <div dangerouslySetInnerHTML={{ __html: welcome[1]}} />
       </div>
       <div>
         <p>follow me:</p>
@@ -33,9 +30,7 @@ return(
     <section id="about">
       <div>
         <h2>About</h2>
-        <p>I have been working as a front end developer since 2018, and I immediately started struggling with Smarty, PHP and SQL.</p>
-        <p>In the meantime I sing early music as countertenor with Polish early music ansambles.</p>
-        <p>If we have the opportunity to talk on Skype, you'll see bookshelves with books behind me.</p>
+        <div dangerouslySetInnerHTML={{ __html: welcome[0]}} />
       </div>
       
       <div>
@@ -44,17 +39,6 @@ return(
         {data.allSkillTech.nodes.map((node, index)=>(
           <li key={index}>{node.name}</li>
         ))}
-        {/*<li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>jQuery</li>
-        <li>React</li>
-        <li>PHP</li>
-        <li>SQL</li>
-        <li>Prestashop</li>
-        <li>Wordpress</li>
-        <li>Gatsby.js</li>
-        <li>git</li>*/}
       </ul>
       </div>
       
@@ -78,6 +62,17 @@ export const query = graphql`
         id
         name
       }
+    },
+  allMarkdownRemark{
+    edges {
+      node {
+        html
+        frontmatter {
+          title
+        }
+      }
     }
   }
+}
 `
+
