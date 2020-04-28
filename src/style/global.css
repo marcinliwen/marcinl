@@ -44,3 +44,11 @@ h1{
     font-size: 71px;
     line-height: 80px;
 }
+li.tag>a {
+    color: rebeccapurple;
+    text-decoration: none;
+}
+
+li.tag:hover>a {
+    color: #fff;
+}
