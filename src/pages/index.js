@@ -17,7 +17,7 @@ return(
     <SEO title="Home" />
     <section id="welcome">
       <div>
-      <div dangerouslySetInnerHTML={{ __html: welcome[0]}} />
+      <div dangerouslySetInnerHTML={{ __html: welcome[1]}} />
       </div>
       <div>
         <p>follow me:</p>
@@ -31,7 +31,7 @@ return(
     <section id="about">
       <div>
         <h2>About</h2>
-        <div dangerouslySetInnerHTML={{ __html: welcome[1]}} />
+        <div dangerouslySetInnerHTML={{ __html: welcome[0]}} />
       </div>
       
       <div>
@@ -47,18 +47,17 @@ return(
     <section id="projects">
       <div>
         <h2>Projects</h2>
+        <button>commercial</button>
+       <button>github</button>
       </div>
-      <div>
+      <div className="projects-container">
         <ul>
-          <li>Butik.pl: - coding styles for the entire store based on PSD (Prestashop), - maintenance and new features</li>
-          <li>Paklo.pl: - coding styles for the entire store based on PSD (Prestashop); - Subject SG integration, - maintenance and new features</li>
-          <li>b2b.rodan24.pl: - coding styles for the entire store based on PSD (Prestashop), - maintenance and new features</li>
-          <li>Salon.pl: - coding styles for the entire store based on PSD (Prestashop), - maintenance and new features</li>
-          <li>Shoperly.pl: - coding styles for category pages based on PSD (Prestashop) - page speed optimalisation, - Inpost integration, - maintenance and new features</li>
-          <li>Sohoshop.pl: - conding style based on PSD (Wordpress)</li>
-          <li>Sas24.pl: - maintenance and new features</li>
-          <li>biuronimo.pl: - maintenance and new features</li>
-          <li>b2b.biurozplusem.pl: - maintenance and new features</li>
+        {data.allProjects.nodes.map((node, index)=>(
+          <li key={index} className='project-item'>
+            <div><h4><a href={node.link}></a>{node.name}</h4></div>
+            <div className="project-skills"><ul>{node.skills.map(skill=>(<li>{skill}</li>))}</ul></div>
+          </li>
+        ))}
         </ul>
       </div>
       
@@ -67,7 +66,6 @@ return(
       <h2>Contact</h2>
       <Contact />
     </section>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )}
 
@@ -79,6 +77,14 @@ export const query = graphql`
       nodes {
         id
         name
+      }
+    },
+    allProjects {
+      nodes {
+        id
+        name
+        link
+        skills
       }
     },
   allMarkdownRemark

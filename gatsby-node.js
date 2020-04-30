@@ -30,5 +30,66 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
         },
       }
       actions.createNode(node)
-    })
+    });
+
+    const projects = [
+      {
+        name: 'Butik.pl',
+        link: 'www.butik.pl',
+        skills: ['coding styles for the entire store based on PSD (Prestashop)', 'RWD', 'maintenance and new features']
+      },
+      {
+        name: 'Paklo.pl',
+        link: 'www.paklo.pl',
+        skills: ['coding styles for the entire store based on PSD (Prestashop)', 'RWD', 'Subject SG integration', 'maintenance and new features']
+      },
+      {
+        name: 'B2B.Rodan24.pl',
+        link: 'www.b2b.rodan24.pl',
+        skills: ['coding styles for the entire store based on PSD (Prestashop)','RWD', 'maintenance and new features']
+      },
+      {
+        name: 'Salon.pl',
+        link: 'www.salon.pl',
+        skills: ['coding styles for the entire store based on PSD (Prestashop)', 'RWD', 'maintenance and new features']
+      },
+      {
+        name: 'Shoperly.pl',
+        link: 'www.shoperly.pl',
+        skills: ['coding styles for the entire store based on PSD (Prestashop)', 'RWD','Inpost integration', 'page performance speed', 'maintenance and new features']
+      },
+      {
+        name: 'Sohoshop.pl',
+        link: 'www.sohoshop.pl',
+        skills: ['conding style based on PSD (Wordpress)', 'RWD', 'maintenance and new features']
+      },
+      {
+        name: 'Sas24.pl',
+        link: 'www.sas24.pl',
+        skills: ['RWD','page performance speed', 'maintenance and new features', 'SEO']
+      },
+      {
+        name: 'Biuronimo.pl',
+        link: 'www.biuronimo.pl',
+        skills: ['RWD','page performance speed', 'maintenance and new features', 'SEO']
+      },
+      {
+        name: 'B2B.Biurozplusem.pl',
+        link: 'www.b2b.biurozplusem.pl',
+        skills: ['RWD','page performance speed', 'maintenance and new features', 'SEO']
+      },
+    ]
+    projects.forEach(project => {
+      const node = {
+        name: project.name,
+        link: project.link,
+        skills: project.skills,
+        id: createNodeId(`Project-${project.name}`),
+        internal: {
+          type: "Projects",
+          contentDigest: createContentDigest(project),
+        },
+      }
+      actions.createNode(node)
+    });
   }

@@ -29,14 +29,16 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth: 1190,
+          overflow: `hidden`,
         }}
       >
         <main>{children}</main>
-        <footer>
+        
+      </div>
+      <footer>
          coding since 2018
         </footer>
-      </div>
     </>
   )
 }
