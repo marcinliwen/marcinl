@@ -1,4 +1,4 @@
-import React from "react"
+import React , { useState }from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
@@ -9,21 +9,33 @@ import Contact from "../components/contact"
 import "../style/global.css"
 
 const IndexPage = ({data}) => {
-  var welcome = data.allMarkdownRemark.edges.map(({node})=>  node.html);
-  console.log(welcome);
+  const [projectSwith, setProjectSwith] = useState(false);
+
+
+  var welcome ="";
+  var about ="";
+
+  data.allMarkdownRemark.edges.forEach((element, index)=>{
+    if(element.node.frontmatter.title === 'welcome'){
+      welcome = element.node.html;
+    }else if(element.node.frontmatter.title === 'about'){
+      about = element.node.html;
+    }
+  })
+
 return(
 
   <Layout>
     <SEO title="Home" />
     <section id="welcome">
       <div>
-      <div dangerouslySetInnerHTML={{ __html: welcome[1]}} />
+      <div dangerouslySetInnerHTML={{ __html: welcome}} />
       </div>
       <div>
         <p>follow me:</p>
         <ul className="tag-list">
-          <li className="tag"><a href="https://github.com/marcinliwen">git</a></li>
-          <li className="tag"><a href="www.linkedin.com/in/marcinliwen">linkedin</a></li>
+          <li className="tag"><a href="https://github.com/marcinliwen" target="_blank" rel="noopener noreferrer">git</a></li>
+          <li className="tag"><a href="https://linkedin.com/in/marcinliwen" target="_blank" rel="noreferrer noopener">linkedin</a></li>
         </ul>
       </div>
     </section>
@@ -31,7 +43,7 @@ return(
     <section id="about">
       <div>
         <h2>About</h2>
-        <div dangerouslySetInnerHTML={{ __html: welcome[0]}} />
+        <div dangerouslySetInnerHTML={{ __html: about}}  style={{paddingRight: `15%`}}/>
       </div>
       
       <div>
@@ -47,14 +59,21 @@ return(
     <section id="projects">
       <div>
         <h2>Projects</h2>
-        <button>commercial</button>
-       <button>github</button>
+        <div className={projectSwith?"github":"commercial"}>
+          <span className="commercial">Commercial</span>
+            <div className="switch">
+              <input type="checkbox" id="projects-switch" role="switch" onChange={()=>setProjectSwith(!projectSwith)}/>
+              <span className="switcher"></span>
+            </div>
+          <span class="github">Github</span>
+        </div>
+        
       </div>
       <div className="projects-container">
         <ul>
         {data.allProjects.nodes.map((node, index)=>(
           <li key={index} className='project-item'>
-            <div><h4><a href={node.link}></a>{node.name}</h4></div>
+            <div><h4><a href={node.link}>{node.name}</a></h4></div>
             <div className="project-skills"><ul>{node.skills.map(skill=>(<li>{skill}</li>))}</ul></div>
           </li>
         ))}

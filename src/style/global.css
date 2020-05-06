@@ -3,6 +3,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
 }
 .nav-link::first-letter {
     visibility: visible;
@@ -166,4 +167,55 @@ header.-open #open-menu {
     main{
         padding-left: 0px
     }
+}
+
+.switch {
+    width: 40px;
+    height: 22px;
+    border-radius: 15px;
+    background: rebeccapurple;
+    display: inline-block;
+    margin: 5px 15px;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    box-shadow: 0 0 black;
+}
+
+.switcher {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    position: absolute;
+    z-index: 9;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+     -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+     box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    -webkit-transition: left 90ms cubic-bezier(.4,0,.2,1),-webkit-transform 90ms cubic-bezier(.4,0,.2,1);
+    transition: left 90ms cubic-bezier(.4,0,.2,1),-webkit-transform 90ms cubic-bezier(.4,0,.2,1);
+    -o-transition: transform 90ms cubic-bezier(.4,0,.2,1),left 90ms cubic-bezier(.4,0,.2,1);
+    transition: transform 90ms cubic-bezier(.4,0,.2,1),left 90ms cubic-bezier(.4,0,.2,1);
+    transition: left 90ms cubic-bezier(.4,0,.2,1);
+}
+input#projects-switch:checked + .switcher {
+    left: 20px;
+}
+input#projects-switch {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+.commercial .commercial {
+    background: #ffcb00;
+}
+
+.github .github {
+    background: #ffcb00;
 }
