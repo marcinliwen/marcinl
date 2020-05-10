@@ -57,9 +57,9 @@ return(
       
     </section>
     <section id="projects">
-      <div>
+      <div className="projects-header">
         <h2>Projects</h2>
-        <div className={projectSwith?"github":"commercial"}>
+        <div className={projectSwith?"switch-container github":"switch-container commercial"}>
           <span className="commercial">Commercial</span>
             <div className="switch">
               <input type="checkbox" id="projects-switch" role="switch" onChange={()=>setProjectSwith(!projectSwith)}/>

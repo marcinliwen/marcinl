@@ -13,6 +13,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       { name: "JavaScript"},
       { name: "jQuery"},
       { name: "PHP"},
+      { name: "SMARTY"},
       { name: "SQL"},
       { name: "React"},
       { name: "Gatsby,js"},
@@ -36,27 +37,27 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       {
         name: 'Butik.pl',
         link: 'www.butik.pl',
-        skills: ['coding styles for the entire store based on PSD (Prestashop)', 'RWD', 'maintenance and new features']
+        skills: ['PSD to HTML/CSS/JS','SQL/PHP/smarty', 'RWD', 'maintenance and new features']
       },
       {
         name: 'Paklo.pl',
         link: 'www.paklo.pl',
-        skills: ['coding styles for the entire store based on PSD (Prestashop)', 'RWD', 'Subject SG integration', 'maintenance and new features']
+        skills: ['PSD to HTML/CSS/JS','SQL/PHP/smarty', 'RWD', 'maintenance and new features']
       },
       {
         name: 'B2B.Rodan24.pl',
         link: 'www.b2b.rodan24.pl',
-        skills: ['coding styles for the entire store based on PSD (Prestashop)','RWD', 'maintenance and new features']
+        skills: ['PSD to HTML/CSS/JS','SQL/PHP/smarty','RWD', 'maintenance and new features']
       },
       {
         name: 'Salon.pl',
         link: 'www.salon.pl',
-        skills: ['coding styles for the entire store based on PSD (Prestashop)', 'RWD', 'maintenance and new features']
+        skills: ['PSD to HTML/CSS/JS','SQL/PHP/smarty','RWD', 'maintenance and new features']
       },
       {
         name: 'Shoperly.pl',
         link: 'www.shoperly.pl',
-        skills: ['coding styles for the entire store based on PSD (Prestashop)', 'RWD','Inpost integration', 'page performance speed', 'maintenance and new features']
+        skills: ['PSD to HTML/CSS/JS','SQL/PHP/smarty', 'RWD','page performance speed', 'maintenance and new features']
       },
       {
         name: 'Sohoshop.pl',
