@@ -1,0 +1,82 @@
+.timeline-container {
+    width: 100%;
+    overflow: auto;
+    padding:20px 20px 20px 40px;
+    position: relative;
+}
+.timeline-wrapper:before {
+    content: "";
+    width: 6px;
+    display: block;
+    height: 100%;
+    background-color: #ddd;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    left: 13px;
+}
+.timeline-wrapper {
+    display: flex;
+    flex: 1 1 100%;
+    height: 80%;
+    position: relative;
+}
+.timeline ul li a {
+    color: #333;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 14px;
+}
+.timeline .date:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #333;
+    left: -33px;
+    top: 4px;
+    border-radius: 100%;
+}
+.timeline .date {
+    margin: 10px 0;
+    line-height: 24px;
+    position: relative;
+}
+.timeline.item .position {
+    font-weight: 700;
+}
+.title {
+    font-size: 14px;
+}
+.description {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 10px 0;
+}
+.timeline.item {
+    margin-bottom: 50px;
+}
+
+.timeline.item .body {
+    padding: 10px 30px 10px 10px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    position: relative;
+}
+.timeline.item .more {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timeline.item .projects li {
+    font-size: 12px;
+    margin: 0;
+}
+.timeline.item .projects {
+    display: none;
+}

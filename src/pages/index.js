@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Contact from "../components/contact"
-
+import Timeline from "../components/timeline"
 import "../style/global.css"
 
 const IndexPage = ({data}) => {
@@ -32,7 +32,7 @@ return(
       <div dangerouslySetInnerHTML={{ __html: welcome}} />
       </div>
       <div>
-        <p>follow me:</p>
+        <p>find me:</p>
         <ul className="tag-list">
           <li className="tag"><a href="https://github.com/marcinliwen" target="_blank" rel="noopener noreferrer">git</a></li>
           <li className="tag"><a href="https://linkedin.com/in/marcinliwen" target="_blank" rel="noreferrer noopener">linkedin</a></li>
@@ -58,28 +58,29 @@ return(
     </section>
     <section id="projects">
       <div className="projects-header">
-        <h2>Projects</h2>
-        <div className={projectSwith?"switch-container github":"switch-container commercial"}>
-          <span className="commercial">Commercial</span>
-            <div className="switch">
-              <input type="checkbox" id="projects-switch" role="switch" onChange={()=>setProjectSwith(!projectSwith)}/>
-              <span className="switcher"></span>
-            </div>
-          <span class="github">Github</span>
-        </div>
-        
+        <h2>Timeline</h2>
       </div>
-      <div className="projects-container">
+     
+     <Timeline data={data.allProjects.nodes}/>
+      
+      {/*<div className="projects-container">
         <ul>
         {data.allProjects.nodes.map((node, index)=>(
           <li key={index} className='project-item'>
             <div><h4><a href={node.link}>{node.name}</a></h4></div>
-            <div className="project-skills"><ul>{node.skills.map(skill=>(<li>{skill}</li>))}</ul></div>
+            <div className="project-skills"><ul>{node.skills.map(skill=>(<li key={skill+index}>{skill}</li>))}</ul></div>
           </li>
         ))}
         </ul>
+        </div>*/}
+      <div className={projectSwith?"switch-container github":"switch-container commercial"}>
+        <span className="commercial">Timeline</span>
+          <div className="switch">
+            <input type="checkbox" id="projects-switch" role="switch" onChange={()=>setProjectSwith(!projectSwith)}/>
+            <span className="switcher"></span>
+          </div>
+        <span className="github">Github</span>
       </div>
-      
     </section>
     <section id="contact">
       <h2>Contact</h2>
