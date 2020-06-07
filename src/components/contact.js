@@ -26,7 +26,8 @@ export default function Contact() {
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute('action')))
+      //.then(() => navigate(form.getAttribute('action')))
+      .then(()=>{})
       .catch((error) => alert(error))
   }
 

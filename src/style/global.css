@@ -32,7 +32,7 @@ header {
     height: 100%;
 }
 section {
-    height: 100vh;
+    height: 100%;
     padding: 1.0875rem 1.45rem;
     display: flex;
     align-items: center;
