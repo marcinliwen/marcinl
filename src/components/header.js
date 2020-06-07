@@ -52,6 +52,19 @@ const Header = ({ siteTitle }) =>{
           </li>
           <li style={{ margin: `20px 10px` }}>
             <Link
+              to={`/#timeline`}
+              className="nav-link"
+              style={{
+                color: `white`,
+                textDecoration: `none`,
+                fontFamily: `sans-serif`,
+              }}
+            >
+              Timeline
+            </Link>
+          </li>
+          <li style={{ margin: `20px 10px` }}>
+            <Link
               to={`/#projects`}
               className="nav-link"
               style={{

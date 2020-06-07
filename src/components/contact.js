@@ -50,21 +50,21 @@ export default function Contact() {
         </p>
         <p>
           <label>
-            Your name:
+            name:
             <br />
             <input type="text" name="name" onChange={handleChange} />
           </label>
         </p>
         <p>
           <label>
-            Your email:
+            email:
             <br />
             <input type="email" name="email" onChange={handleChange} />
           </label>
         </p>
         <p>
           <label>
-            Message:
+            message:
             <br />
             <textarea name="message" onChange={handleChange} />
           </label>

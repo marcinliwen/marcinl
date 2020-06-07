@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Contact from "../components/contact"
 import Timeline from "../components/timeline"
+import Github from "../components/github"
 import "../style/global.css"
 
 const IndexPage = ({data}) => {
@@ -56,14 +57,13 @@ return(
       </div>
       
     </section>
-    <section id="projects">
-      <div className="projects-header">
+    <section id="timeline">
         <h2>Timeline</h2>
-      </div>
-     
-     <Timeline data={data.allProjects.nodes}/>
-      
-      {/*<div className="projects-container">
+      <Timeline data={data.allProjects.nodes}/>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+      <div className="projects-container">
         <ul>
         {data.allProjects.nodes.map((node, index)=>(
           <li key={index} className='project-item'>
@@ -72,15 +72,18 @@ return(
           </li>
         ))}
         </ul>
-        </div>*/}
+        </div>
       <div className={projectSwith?"switch-container github":"switch-container commercial"}>
-        <span className="commercial">Timeline</span>
+        <span className="commercial">Commerce</span>
           <div className="switch">
             <input type="checkbox" id="projects-switch" role="switch" onChange={()=>setProjectSwith(!projectSwith)}/>
             <span className="switcher"></span>
           </div>
         <span className="github">Github</span>
       </div>
+    </section>
+    <section>
+      <Github />
     </section>
     <section id="contact">
       <h2>Contact</h2>

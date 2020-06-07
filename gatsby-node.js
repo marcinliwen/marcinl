@@ -36,47 +36,47 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
     const projects = [
       {
         name: 'Butik.pl',
-        link: 'www.butik.pl',
+        link: 'https://butik.pl',
         skills: ['PSD to HTML/CSS/JS','SQL/PHP/smarty', 'RWD', 'maintenance and new features']
       },
       {
         name: 'Paklo.pl',
-        link: 'www.paklo.pl',
+        link: 'https://paklo.pl',
         skills: ['PSD to HTML/CSS/JS','SQL/PHP/smarty', 'RWD', 'maintenance and new features']
       },
       {
         name: 'B2B.Rodan24.pl',
-        link: 'www.b2b.rodan24.pl',
+        link: 'https://b2b.rodan24.pl',
         skills: ['PSD to HTML/CSS/JS','SQL/PHP/smarty','RWD', 'maintenance and new features']
       },
       {
         name: 'Salon.pl',
-        link: 'www.salon.pl',
+        link: 'https://salon.pl',
         skills: ['PSD to HTML/CSS/JS','SQL/PHP/smarty','RWD', 'maintenance and new features']
       },
       {
         name: 'Shoperly.pl',
-        link: 'www.shoperly.pl',
+        link: 'https://shoperly.pl',
         skills: ['PSD to HTML/CSS/JS','SQL/PHP/smarty', 'RWD','page performance speed', 'maintenance and new features']
       },
       {
         name: 'Sohoshop.pl',
-        link: 'www.sohoshop.pl',
+        link: 'https://sohoshop.pl',
         skills: ['conding style based on PSD (Wordpress)', 'RWD', 'maintenance and new features']
       },
       {
         name: 'Sas24.pl',
-        link: 'www.sas24.pl',
+        link: 'https://sas24.pl',
         skills: ['RWD','page performance speed', 'maintenance and new features', 'SEO']
       },
       {
         name: 'Biuronimo.pl',
-        link: 'www.biuronimo.pl',
+        link: 'https://biuronimo.pl',
         skills: ['RWD','page performance speed', 'maintenance and new features', 'SEO']
       },
       {
         name: 'B2B.Biurozplusem.pl',
-        link: 'www.b2b.biurozplusem.pl',
+        link: 'https://b2b.biurozplusem.pl',
         skills: ['RWD','page performance speed', 'maintenance and new features', 'SEO']
       },
     ]
@@ -93,4 +93,6 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       }
       actions.createNode(node)
     });
+
+    
   }

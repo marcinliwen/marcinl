@@ -3,7 +3,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
 import { SvgIcon } from '@material-ui/core';
+import TransitionsModal from './modal';
+
 
 import "./timeline.css"
 const Timeline = () =>{
@@ -53,9 +56,15 @@ const Timeitem = (props) =>{
                     <div className='company'>{props.company}</div>
                 </div>
                 <div className="description">{props.description}</div>
-                <div className="more" onClick={()=>setOpenDescription(!openDescription)}>
-                    <SvgIcon component={AddCircleOutlineIcon} style={{fontSize: 18}}/>
-                </div>
+                {props.projects
+                    ?<div className="more" onClick={()=>setOpenDescription(!openDescription)}> 
+                        {openDescription
+                            ?<SvgIcon component={RemoveCircleOutlineIcon} style={{fontSize: 18}}/>
+                            :<SvgIcon component={AddCircleOutlineIcon} style={{fontSize: 18}}/>
+                        }
+                    </div>
+                    : null
+                }
               <Projects projects={props.projects?props.projects:null}/>
             </div>
         </div>
@@ -79,4 +88,3 @@ const Projects = (props) =>{
 }
 
 export default Timeline;
-
