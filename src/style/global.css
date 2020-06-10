@@ -1,3 +1,13 @@
+
+*{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 header {
     height: 100vh;
     position: fixed;
@@ -62,7 +72,7 @@ span.contrast-text {
     background: #ffcb00;
     padding: 2px 6px;
 }
-ul.skills, .tag-list {
+.skills, .tag-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -72,7 +82,7 @@ ul.skills, .tag-list {
     justify-content: flex-start;
 }
 
-ul.skills li, .tag {
+.skills li, .tag {
     padding: 2px 8px;
     border: 2px solid rebeccapurple;
     border-radius: 3px;
@@ -136,6 +146,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .projects-container >ul {
@@ -143,7 +154,7 @@ footer {
     flex-wrap: wrap;
 }
 
-li.project-item {
+.projects-container  .project-item {
     flex-grow: 1;
     border-radius: 6px;
     box-shadow: 1px 3px 6px #00000030;
@@ -156,13 +167,13 @@ li.project-item {
     font-weight: 400;
 }
 .project-skills {
-    padding-left: 15px;
+   
     margin-top: 10px;
-    padding-bottom: 15px;
+    padding: 0 15px 15px;
 }
 
 .project-skills li:before {content: "#";color: rebeccapurple;font-weight: bold;}
-li.project-item>div:first-of-type {
+.project-item>div:first-of-type {
     padding: 15px;
 }
 .open-menu-container {
@@ -283,4 +294,54 @@ input#projects-switch {
 
 .github .github {
     background: #ffcb00;
+}
+._commercial ._git {
+    display: none;
+}
+
+._commercial ._com {
+    display: flex;
+}
+
+._github ._com {
+    display: none;
+}
+
+._github ._git {
+    display:flex;
+}
+.projects-container h4 {
+    margin: 0;
+}
+#about >div {
+    width: 100%;
+}
+#contact input, textarea {
+    border: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+    border-radius: 6px;
+    padding: 0 10px;
+    line-height: 32px;
+    font-size: 16px;
+    width: 250px;
+}
+
+#contact input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+}
+
+#contact button {
+    border-radius: 4px;
+    padding: 0 25px;
+    border-color: rebeccapurple;
+    color: #fff;
+    background: rebeccapurple;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 32px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+}
+#contact button:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
 }

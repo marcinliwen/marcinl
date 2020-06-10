@@ -98,3 +98,38 @@
     margin: 0 0 15px 0;
     list-style: none;
 }
+@media(min-width: 760px){
+    .timeline-wrapper:before {
+        left: 50%;
+    }
+    
+    .timeline.item {
+        width: 45%;
+    }
+    
+    .timeline.item:nth-child(2n) {
+        margin-left: 0;
+    }
+    
+    .timeline-container {
+        padding: 0;
+    }
+    
+    .timeline.item {
+     
+        margin-left: auto;
+    }
+    .timeline .date{
+        text-align:left;
+    }
+    .timeline .date:before {
+        left: -37px;
+    }
+    .timeline.item:nth-child(2n) .date{
+        text-align:right;
+    }
+    .timeline.item:nth-child(2n) .date:before {
+        left: auto;
+        right: -42px;
+    }
+}

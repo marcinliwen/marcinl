@@ -24,7 +24,7 @@ const Header = ({ siteTitle }) =>{
         margin: `auto`,
         textAlign: `center`
         }}>
-          <li style={{ margin: `20px 10px` }}>
+          <li style={{ margin: `20px 10px` }} onClick={()=>setOpenMenu(!openMenu)}>
             <Link
               to={`/#welcome`}
               className="nav-link"
@@ -37,7 +37,7 @@ const Header = ({ siteTitle }) =>{
               Welcome
             </Link>
           </li>
-          <li style={{ margin: `20px 10px` }}>
+          <li style={{ margin: `20px 10px` }} onClick={()=>setOpenMenu(!openMenu)}>
             <Link
               to={`/#about`}
               className="nav-link"
@@ -50,7 +50,7 @@ const Header = ({ siteTitle }) =>{
               About
             </Link>
           </li>
-          <li style={{ margin: `20px 10px` }}>
+          <li style={{ margin: `20px 10px` }} onClick={()=>setOpenMenu(!openMenu)}>
             <Link
               to={`/#timeline`}
               className="nav-link"
@@ -63,7 +63,7 @@ const Header = ({ siteTitle }) =>{
               Timeline
             </Link>
           </li>
-          <li style={{ margin: `20px 10px` }}>
+          <li style={{ margin: `20px 10px` }} onClick={()=>setOpenMenu(!openMenu)}>
             <Link
               to={`/#projects`}
               className="nav-link"
@@ -76,7 +76,7 @@ const Header = ({ siteTitle }) =>{
               Projects
             </Link>
           </li>
-          <li style={{ margin: `20px 10px` }}>
+          <li style={{ margin: `20px 10px` }} onClick={()=>setOpenMenu(!openMenu)}>
             <Link
               to={`/#contact`}
               className="nav-link"

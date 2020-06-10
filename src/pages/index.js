@@ -1,4 +1,4 @@
-import React , { useState }from "react"
+import React , { useState , useRef}from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
@@ -9,10 +9,14 @@ import Timeline from "../components/timeline"
 import Github from "../components/github"
 import "../style/global.css"
 
+
+
+
 const IndexPage = ({data}) => {
   const [projectSwith, setProjectSwith] = useState(false);
 
-
+  
+  
   var welcome ="";
   var about ="";
 
@@ -61,29 +65,27 @@ return(
         <h2>Timeline</h2>
       <Timeline data={data.allProjects.nodes}/>
     </section>
-    <section id="projects">
+    <section id="projects" className={projectSwith?"_github":"_commercial"}>
         <h2>Projects</h2>
-      <div className="projects-container">
+      <div className="projects-container _com">
         <ul>
         {data.allProjects.nodes.map((node, index)=>(
           <li key={index} className='project-item'>
-            <div><h4><a href={node.link}>{node.name}</a></h4></div>
+            <div><h4><a href={node.link} target="_blank" rel="noopener noreferrer">{node.name}</a></h4></div>
             <div className="project-skills"><ul>{node.skills.map(skill=>(<li key={skill+index}>{skill}</li>))}</ul></div>
           </li>
         ))}
         </ul>
         </div>
+      <Github />
       <div className={projectSwith?"switch-container github":"switch-container commercial"}>
         <span className="commercial">Commerce</span>
           <div className="switch">
-            <input type="checkbox" id="projects-switch" role="switch" onChange={()=>setProjectSwith(!projectSwith)}/>
+            <input type="checkbox" id="projects-switch" role="switch" onChange={()=>setProjectSwith(!projectSwith)} />
             <span className="switcher"></span>
           </div>
         <span className="github">Github</span>
       </div>
-    </section>
-    <section>
-      <Github />
     </section>
     <section id="contact">
       <h2>Contact</h2>

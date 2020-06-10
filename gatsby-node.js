@@ -67,17 +67,17 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       {
         name: 'Sas24.pl',
         link: 'https://sas24.pl',
-        skills: ['RWD','page performance speed', 'maintenance and new features', 'SEO']
+        skills: ['RWD', 'maintenance and new features', 'SEO']
       },
       {
         name: 'Biuronimo.pl',
         link: 'https://biuronimo.pl',
-        skills: ['RWD','page performance speed', 'maintenance and new features', 'SEO']
+        skills: ['RWD', 'maintenance and new features', 'SEO']
       },
       {
         name: 'B2B.Biurozplusem.pl',
         link: 'https://b2b.biurozplusem.pl',
-        skills: ['RWD','page performance speed', 'maintenance and new features', 'SEO']
+        skills: ['RWD', 'maintenance and new features', 'SEO']
       },
     ]
     projects.forEach(project => {
