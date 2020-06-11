@@ -8,6 +8,9 @@
     -ms-user-select: none;
     user-select: none;
 }
+#gatsby-focus-wrapper {
+    background: #eaeaea;
+}
 header {
     height: 100vh;
     position: fixed;
@@ -15,6 +18,7 @@ header {
     left: -100%;
     z-index: 10;
     transition-duration: 0.3s;
+    background: #313131;
 }
 .nav-link::first-letter {
     visibility: visible;
@@ -27,7 +31,9 @@ a.nav-link {
     text-align: left;
     font-size: 0;
 }
-
+main{
+    background:#eaeaea;
+}
 header {
     width: 75px;
 }
@@ -54,7 +60,7 @@ section h2 {
     width: 100%;
     position: sticky;
     top: 0;
-    background: #fff;
+    background: #eaeaea;
     padding: 10px 0;
     margin: 0;
     opacity: 1;
@@ -83,31 +89,29 @@ span.contrast-text {
 }
 
 .skills li, .tag {
-    padding: 2px 8px;
-    border: 2px solid rebeccapurple;
-    border-radius: 3px;
-    margin: 0 5px 5px 0;
+    padding: 4px 12px;
+    border-radius: 6px;
+    margin: 0 10px 10px 0;
     cursor: pointer;
-    color: rebeccapurple;
+    color: #313131;
+    font-size: 16px;
+        box-shadow: 2px 2px 6px #b9b9b9, -2px -2px 6px #ffffff;
 }
 
 ul.skills li:hover,
 .tag:hover {
-    background: rebeccapurple;
-    color: #fff;
+    color: #313131;
+    box-shadow: 5px 5px 10px #b9b9b9, -5px -5px 10px #ffffff;
 }
 h1{
     font-size: 48px;
     line-height: 80px;
 }
 li.tag>a {
-    color: rebeccapurple;
+    color: #313131;
     text-decoration: none;
 }
 
-li.tag:hover>a {
-    color: #fff;
-}
 main{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -138,7 +142,7 @@ footer {
     bottom: 0;
     width: calc(100% + 40px);
     justify-content: center;
-    background: #fff;
+    background: #eaeaea;
 }
 .projects-container {
     font-size: 14px;
@@ -157,13 +161,16 @@ footer {
 .projects-container  .project-item {
     flex-grow: 1;
     border-radius: 6px;
-    box-shadow: 1px 3px 6px #00000030;
-    margin: 4px;
+        box-shadow: 2px 2px 6px #b9b9b9, -2px -2px 6px #ffffff;
+    margin: 10px 4px;
     width: calc(100% - 8px);
+}
+.projects-container .project-item:hover {
+    box-shadow: 5px 5px 10px #b9b9b9, -5px -5px 10px #ffffff;
 }
 .project-item a{
     text-decoration: none;
-    color: #333;
+    color: #313131;
     font-weight: 400;
 }
 .project-skills {
@@ -172,7 +179,7 @@ footer {
     padding: 0 15px 15px;
 }
 
-.project-skills li:before {content: "#";color: rebeccapurple;font-weight: bold;}
+.project-skills li:before {content: "#";color: #313131;font-weight: bold;}
 .project-item>div:first-of-type {
     padding: 15px;
 }
@@ -197,7 +204,7 @@ footer {
     display: flex;
     margin: auto;
     border-radius: 50px;
-    background: #663399;
+    background: #313131;
     transition:  transform .3s ease-out .3s; 
 }
 header.-open {
@@ -217,7 +224,9 @@ header.-open .nav-link,header.-open .nav-link:first-letter {
 }
 header.-open  .menu-shadow{
     transition: box-shadow .3s ease-out .3s;
-    box-shadow: 5px 5px 11px #572b82, -2px 1px 11px #753bb0;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #343434, #2c2c2c);
+    box-shadow: 5px 5px 10px #2a2a2a, -5px -5px 10px #383838;
     
 }
 header.-open #open-menu {
@@ -246,38 +255,33 @@ header.-open .open-menu-container {
 }
 
 .switch {
-    width: 40px;
-    height: 22px;
+    width: 44px;
+    height: 24px;
     border-radius: 15px;
-    background: rebeccapurple;
-    display: inline-block;
+    background: #eaeaea;
     margin: 0px 15px;
     position: relative;
     display: flex;
     cursor: pointer;
-    box-shadow: 0 0 black;
+    box-shadow: inset 2px 2px 4px #b9b9b9, inset -2px -2px 4px #ffffff;
 }
 
 .switcher {
     content: "";
     width: 18px;
     height: 18px;
-    background: #fff;
     position: absolute;
     z-index: 9;
     border-radius: 50%;
-    top: 2px;
-    left: 2px;
-     -webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-     box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-    -webkit-transition: left 90ms cubic-bezier(.4,0,.2,1),-webkit-transform 90ms cubic-bezier(.4,0,.2,1);
-    transition: left 90ms cubic-bezier(.4,0,.2,1),-webkit-transform 90ms cubic-bezier(.4,0,.2,1);
-    -o-transition: transform 90ms cubic-bezier(.4,0,.2,1),left 90ms cubic-bezier(.4,0,.2,1);
+    top: 4px;
+    left: 4px;
     transition: transform 90ms cubic-bezier(.4,0,.2,1),left 90ms cubic-bezier(.4,0,.2,1);
     transition: left 90ms cubic-bezier(.4,0,.2,1);
+    background: #eaeaea;
+    box-shadow: 1px 1px 2px #b9b9b9, -1px -1px 2px #ffffff
 }
 input#projects-switch:checked + .switcher {
-    left: 20px;
+    left: 22px;
 }
 input#projects-switch {
     display: block;
@@ -318,30 +322,31 @@ input#projects-switch {
 }
 #contact input, textarea {
     border: none;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+        box-shadow: 2px 2px 6px #b9b9b9, -2px -2px 6px #ffffff;
     border-radius: 6px;
     padding: 0 10px;
     line-height: 32px;
     font-size: 16px;
     width: 250px;
+    background: #eaeaea;
 }
 
 #contact input:focus, textarea:focus {
     outline: none;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    box-shadow: 1px 1px 4px #b9b9b9, -1px -1px 4px #ffffff;
 }
 
 #contact button {
-    border-radius: 4px;
-    padding: 0 25px;
-    border-color: rebeccapurple;
-    color: #fff;
-    background: rebeccapurple;
+    border-radius: 8px;
+    padding: 0px 30px;
+    border: none;
+    color: #313131;
+    background: #eaeaea;
     cursor: pointer;
     font-size: 16px;
     line-height: 32px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+    box-shadow: 2px 2px 6px #b9b9b9, -2px -2px 6px #ffffff;
 }
 #contact button:hover {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    box-shadow: 1px 1px 4px #b9b9b9, -1px -1px 4px #ffffff;
 }

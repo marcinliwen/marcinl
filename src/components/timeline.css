@@ -59,8 +59,11 @@
     padding: 10px 30px 10px 10px;
     position: relative;
     border-radius: 6px;
-    box-shadow: 1px 3px 6px #00000030;
+    box-shadow: 2px 2px 6px #b9b9b9, -2px -2px 6px #ffffff;
     margin: 4px;
+}
+.timeline.item .body:hover {
+    box-shadow: 5px 5px 10px #b9b9b9, -5px -5px 10px #ffffff;
 }
 .timeline.item .more {
     width: 30px;
@@ -92,7 +95,7 @@
     position: sticky;
     top: 10px;
 }
-.timeline.item .projects li:before {content: '#';margin-right: 15px;color: rebeccapurple;}
+.timeline.item .projects li:before {content: '#';margin-right: 15px;color: #313131;}
 
 .projects ul {
     margin: 0 0 15px 0;

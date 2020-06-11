@@ -6,9 +6,6 @@ const Header = ({ siteTitle }) =>{
   const [openMenu, setOpenMenu] = useState(false);
   return(
   <header
-    style={{
-      background: `rebeccapurple`,
-    }}
     className={openMenu?"-open":""}
   >
     <div  className="open-menu-container">
