@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className="fade-in-fwd" >
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         
       </div>
-    </>
+    </div>
   )
 }
 
