@@ -101,7 +101,7 @@ span.contrast-text {
 ul.skills li:hover,
 .tag:hover {
     color: #313131;
-    box-shadow: 5px 5px 10px #b9b9b9, -5px -5px 10px #ffffff;
+    box-shadow: 1px 1px 2px #b9b9b9, 0px 0px 2px #ffffff;
 }
 h1{
     font-size: 48px;
@@ -166,7 +166,7 @@ footer {
     width: calc(100% - 8px);
 }
 .projects-container .project-item:hover {
-    box-shadow: 5px 5px 10px #b9b9b9, -5px -5px 10px #ffffff;
+    box-shadow: 1px 1px 2px #b9b9b9, 0px 0px 2px #ffffff;
 }
 .project-item a{
     text-decoration: none;
@@ -333,7 +333,7 @@ input#projects-switch {
 
 #contact input:focus, textarea:focus {
     outline: none;
-    box-shadow: 1px 1px 4px #b9b9b9, -1px -1px 4px #ffffff;
+    box-shadow: 1px 1px 2px #b9b9b9, -1px -1px 2px #ffffff;
 }
 
 #contact button {
@@ -348,5 +348,5 @@ input#projects-switch {
     box-shadow: 2px 2px 6px #b9b9b9, -2px -2px 6px #ffffff;
 }
 #contact button:hover {
-    box-shadow: 1px 1px 4px #b9b9b9, -1px -1px 4px #ffffff;
+    box-shadow: 1px 1px 2px #b9b9b9, -1px -1px 2px #ffffff;
 }

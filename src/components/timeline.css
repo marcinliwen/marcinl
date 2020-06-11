@@ -63,7 +63,7 @@
     margin: 4px;
 }
 .timeline.item .body:hover {
-    box-shadow: 5px 5px 10px #b9b9b9, -5px -5px 10px #ffffff;
+    box-shadow: 1px 1px 2px #b9b9b9, 0px 0px 2px #ffffff;
 }
 .timeline.item .more {
     width: 30px;
