@@ -133,6 +133,6 @@
     }
     .timeline.item:nth-child(2n) .date:before {
         left: auto;
-        right: -42px;
+        right: -41px;
     }
 }
