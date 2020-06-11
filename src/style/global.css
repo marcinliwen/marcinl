@@ -66,6 +66,7 @@ section h2 {
     opacity: 1;
     z-index: 1;
     text-align: left;
+    display: flex;
 }
 section#contact h2 {
     text-align: center;
@@ -136,13 +137,15 @@ footer {
 }
 .switch-container {
     display: flex;
-    margin-top: auto;
-    padding: 15px 0;
-    position: sticky;
+    padding: 0 0;
     bottom: 0;
-    width: calc(100% + 40px);
+    width: auto;
     justify-content: center;
     background: #eaeaea;
+    font-size: 16px;
+    line-height: 16px;
+    align-items: center;
+    flex: 1;
 }
 .projects-container {
     font-size: 14px;
@@ -157,7 +160,9 @@ footer {
     display: flex;
     flex-wrap: wrap;
 }
-
+.switch-container>span {
+    height: 18px;
+}
 .projects-container  .project-item {
     flex-grow: 1;
     border-radius: 6px;
@@ -236,6 +241,14 @@ header.-open #open-menu {
 header.-open .open-menu-container {
     width: 300px;
 }
+@media(min-width:760px){
+    header{
+        left:0;
+    }
+    main{
+        padding-left:75px;
+    }
+}
 @media(min-width:1818px){
     .open-menu-container {
         display: none;
@@ -259,7 +272,7 @@ header.-open .open-menu-container {
     height: 24px;
     border-radius: 15px;
     background: #eaeaea;
-    margin: 0px 15px;
+    margin: 0px 4px;
     position: relative;
     display: flex;
     cursor: pointer;

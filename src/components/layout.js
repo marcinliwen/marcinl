@@ -27,7 +27,6 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
-      className="fade-in-fwd"
         style={{
           margin: `0 auto`,
           maxWidth: 1190,
