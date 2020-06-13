@@ -1,16 +1,13 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React,  { useState } from "react"
-import useWindowDimensions from "./useWindowDimensions"
 
 const Header = ({ siteTitle }) =>{ 
   const [openMenu, setOpenMenu] = useState(false);
-  const [ width ] = useWindowDimensions();
+  
 
-  function openMenuHandler(){
-    if(width < 767){
+  function openMenuHandler(e){
       setOpenMenu(!openMenu)
-    }
   };
 
   return(
