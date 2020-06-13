@@ -5,7 +5,7 @@ import useWindowDimensions from "./useWindowDimensions"
 
 const Header = ({ siteTitle }) =>{ 
   const [openMenu, setOpenMenu] = useState(false);
-  const { height, width } = useWindowDimensions();
+  const [ width ] = useWindowDimensions();
 
   function openMenuHandler(){
     if(width < 767){
