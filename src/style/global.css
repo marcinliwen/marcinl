@@ -7,11 +7,12 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-appearance: none;
 }
 #gatsby-focus-wrapper {
     background: #eaeaea;
 }
-header {
+header .menu-nav {
     height: 100vh;
     position: fixed;
     top: 0;
@@ -48,8 +49,8 @@ header {
     height: 100%;
 }
 section {
-    min-height: 100%;
-    padding: 1.0875rem 1.45rem;
+    min-height: 100vh;
+    padding: 18px 24px;
     display: flex;
     align-items: center;
    /*scroll-snap-align: start;*/
@@ -57,16 +58,17 @@ section {
     justify-content: center;
 }
 section h2 {
-    width: 100%;
+    width: calc(100% + 48px);
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     background: #eaeaea;
-    padding: 10px 0;
-    margin: 0;
+    padding: 10px 24px;
+    margin: 0 -24px;
     opacity: 1;
     z-index: 1;
     text-align: left;
-    display: flex;
+    display: block;
 }
 section#contact h2 {
     text-align: center;
@@ -113,11 +115,11 @@ li.tag>a {
     text-decoration: none;
 }
 
-main{
+/*main{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
-}
+}*/
 footer {
     position: absolute;
     right: 0;
@@ -199,6 +201,7 @@ footer {
     padding: 16px 0;
     transition-duration:.3s;
     transition-delay: 0.3s;
+    z-index: 11;
 }
 #open-menu  {
     border: none;
@@ -212,7 +215,7 @@ footer {
     background: #313131;
     transition:  transform .3s ease-out .3s; 
 }
-header.-open {
+header.-open .menu-nav{
     width: 300px;
     left:0px
 }
@@ -241,19 +244,41 @@ header.-open #open-menu {
 header.-open .open-menu-container {
     width: 300px;
 }
+.follow {
+    text-align: right;
+}
+
+.follow .tag-list {
+    justify-content: flex-end;
+}
+
+.follow .tag-list li {
+    margin: 0 0 10px 10px;
+}
 @media(min-width:760px){
-    header{
+    header .menu-nav{
         left:0;
     }
     main{
         padding-left:75px;
+    }
+    .follow {
+        text-align: left;
+    }
+    
+    .follow .tag-list {
+        justify-content: flex-start;
+    }
+    
+    .follow .tag-list li {
+        margin: 0 10px 10px 0;
     }
 }
 @media(min-width:1818px){
     .open-menu-container {
         display: none;
     }
-    header{
+    header .menu-nav{
         width: 300px;
     }
     a.nav-link{
@@ -363,6 +388,8 @@ input#projects-switch {
 #contact button:hover {
     box-shadow: 1px 1px 2px #b9b9b9, -1px -1px 2px #ffffff;
 }
+
+
 .fade-in-left {
 	-webkit-animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;
 	        animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;

@@ -31,12 +31,13 @@ const IndexPage = ({data}) => {
 return(
 
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Marcin L." />
     <section id="welcome">
+      <h2>Hi there!</h2>
       <div>
       <div dangerouslySetInnerHTML={{ __html: welcome}} />
       </div>
-      <div>
+      <div className="follow">
         <p>find me:</p>
         <ul className="tag-list">
           <li className="tag"><a href="https://github.com/marcinliwen" target="_blank" rel="noopener noreferrer">git</a></li>
@@ -46,8 +47,9 @@ return(
     </section>
     
     <section id="about">
+      <h2>About</h2>
       <div>
-        <h2>About</h2>
+        
         <div dangerouslySetInnerHTML={{ __html: about}}  style={{paddingRight: `15%`}}/>
       </div>
       

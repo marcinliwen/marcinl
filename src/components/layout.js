@@ -24,19 +24,18 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className="fade-in-fwd" >
+    <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 1190,
-          overflow: `hidden`,
+          maxWidth: 1190
         }}
       >
         <main>{children}</main>
         
       </div>
-    </div>
+    </>
   )
 }
 

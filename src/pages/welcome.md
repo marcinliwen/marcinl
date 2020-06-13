@@ -2,8 +2,6 @@
 title: "welcome"
 date: "20020-25-04"
 ---
-##Hi there!
-
 #I'm Marcin L.
 
 this is my portfolio website
