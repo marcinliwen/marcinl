@@ -615,6 +615,17 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+.navbar-burger.burger:active {
+  outline: none;
+}
+
+.navbar-burger.burger img:focus {
+  outline: none;
+}
+
+.navbar-burger.burger:focus {
+  outline: none;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

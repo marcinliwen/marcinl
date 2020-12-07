@@ -31,14 +31,12 @@ const Timeline = () =>{
                 position={'Frontend developer'}  
                 company={'Sohoshop.pl'}
                 description={'PSD to HTML/CSS/JS, RWD'}
-                projects={['butik.pl', 'paklo.pl', 'b2b.rodan24.pl']}
             />
             <Timeitem 
                 date={'2019'} 
                 position={'Frontend / backend developer'}  
                 company={'Sohoshop.pl'}
                 description={'PSD to HTML/CSS/JS, SQL/PHP/smarty, RWD, PWA,  page performance, maintenance and new features'}
-                projects={['salon.pl', 'sas24.pl', 'mybee.pl', 'b2b.biurozplusem.pl', 'biuronimo.pl']}
             />
             </div>
         </div>

@@ -68,7 +68,7 @@ section h2 {
     opacity: 1;
     z-index: 1;
     text-align: left;
-    display: block;
+    display: flex;
 }
 section#contact h2 {
     text-align: center;
